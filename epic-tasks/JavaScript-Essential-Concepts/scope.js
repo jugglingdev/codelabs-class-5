@@ -54,7 +54,7 @@ if (true) {
 
 console.log(x);  // 2  // 10 is overridden by if statement  // use let to fix this
 
-// TASKS
+// *** TASKS ***
 
 // TASK 1
 
