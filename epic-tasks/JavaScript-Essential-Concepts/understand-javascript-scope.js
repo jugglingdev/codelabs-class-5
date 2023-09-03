@@ -93,3 +93,32 @@ if (true) {
 }
 
 console.log(newGame);  // Sonic
+
+
+// ADDITIONAL PRACTICE
+
+let globalScope = 2;
+
+function multiply() {
+    let localScope = 3;
+
+    console.log(globalScope * 5);  // 10
+    console.log(localScope * 5);  // 15
+}
+
+
+let myGlobal = 'pineapple';
+console.log(myGlobal);  // pineapple
+
+function scope() {
+    let myLocal = 'pear';
+    myGlobal = 'kiwi';
+
+    console.log(myGlobal);  // kiwi
+    console.log(myLocal)  // pear
+}
+
+scope();
+
+console.log(myGlobal);  // kiwi
+// console.log(myLocal);  // myLocal is not defined
