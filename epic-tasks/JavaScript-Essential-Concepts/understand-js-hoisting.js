@@ -69,6 +69,8 @@ console.log(myBook);  // The Silver Chair
 
 // ADDITIONAL PRACTICE
 
+// *** Variable Hoisting *** //
+
 /* var */
 
 console.log(num);  // undefined (not ReferenceError because 'num' has been declared, just not initialized)
@@ -86,3 +88,26 @@ console.log(favoriteColor);  // blue
 console.log(myDog);  // ReferenceError: Cannot access 'myDog' before initialization
 const myDog = 'Chico Bean';
 console.log(myDog);  // Chico Bean
+
+
+// *** Function Hoisting *** //
+
+/* Function Declaration */
+
+sayHi();  // Hi!
+
+function sayHi() {
+    alert(`Hi!`);
+}
+
+sayHi();  // Hi!
+
+/* Function Initialization */
+
+sayBye();  // this does NOT work (function initializations are NOT hoisted)
+
+let sayBye = function() {
+    alert(`Bye!`);
+}
+
+sayBye();  // Bye!
