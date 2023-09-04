@@ -16,13 +16,13 @@ var author = 'C.S. Lewis';
 
     // under the hood, this is the same as:
 
-    var author;  // declaration
-    console.log(author);  // usage  // undefined because only declarations are hoisted to the top
-    author = 'C.S. Lewis';  // initialization
+    var author2;  // declaration
+    console.log(author2);  // usage  // undefined because only declarations are hoisted to the top
+    author2 = 'C.S. Lewis';  // initialization
 
 
-console.log(author);  // ReferenceError: Cannot access 'author' before initialization
-let author = 'C.S. Lewis';
+console.log(author3);  // ReferenceError: Cannot access 'author' before initialization
+let author3 = 'C.S. Lewis';
 
 
 // FUNCTION HOISTING
@@ -60,8 +60,29 @@ function book(title) {
 
 /* Task 2 */
 
-console.log(book);  // undefined
+console.log(myBook);  // undefined
 
-let book = 'The Silver Chair';
+let myBook = 'The Silver Chair';
 
-console.log(book);  // The Silver Chair
+console.log(myBook);  // The Silver Chair
+
+
+// ADDITIONAL PRACTICE
+
+/* var */
+
+console.log(num);  // undefined (not ReferenceError because 'num' has been declared, just not initialized)
+var num = '42';
+console.log(num);
+
+/* let */
+
+console.log(favoriteColor);  // ReferenceError: Cannot access 'favoriteColor' before initialization
+let favoriteColor = 'blue';
+console.log(favoriteColor);  // blue
+
+/* const */
+
+console.log(myDog);  // ReferenceError: Cannot access 'myDog' before initialization
+const myDog = 'Chico Bean';
+console.log(myDog);  // Chico Bean
