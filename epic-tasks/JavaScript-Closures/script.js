@@ -63,13 +63,45 @@ let myColor = printColor();
 
 console.log(myColor());  // blue
 
-/* Factory function */
+/* Factory function (preset parameters) */
 
+function greetUser(message) {
+    return function (name) {
+        console.log(`${message}, ${name}!`);
+    };
+}
 
+const greetMorning = greetUser('Good morning');
+greetMorning('Liza');  // Good morning, Liza!
 
 /* Functions that return other functions */
 
+function createArithmeticFunction(operator) {
+    return function(a, b) {
+        switch (operator) {
+            case '+':
+                return a + b;
+            case '-':
+                return a - b;
+            case '*':
+                return a * b;
+            case '/':
+                return a / b;
+            default:
+                return NaN;
+        }
+    };
+}
 
+const add = createArithmeticFunction('+');
+const subtract = createArithmeticFunction('-');
+const multiply = createArithmeticFunction('*');
+const divide = createArithmeticFunction('/');
+
+console.log(add(5, 3));  // 8
+console.log(subtract(4, 2));  // 2
+console.log(multiply(2, 24));  // 48
+console.log(divide(15, 3));  // 5
 
 
 // EXERCISES
