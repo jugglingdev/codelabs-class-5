@@ -108,11 +108,39 @@ console.log(divide(15, 3));  // 5
 
 /* Exercise 1 */
 
+function counter() {
+    let count = 0;
+    
+    return function() {
+        return ++count;
+    };
+}
 
+const makeCounter = counter();
+console.log(makeCounter());  // 1
+console.log(makeCounter());  // 2
+console.log(makeCounter());  // 3
 
 /* Exercise 2 */
 
+// function makeAdder(a) {
+//     return function(b) {
+//         return a + b;
+//     };
+// }
 
+// const addNumbers = makeAdder(4);
+// console.log( addNumbers(8) );  // 12
 
-/* Exercise 3 */
+// /* Exercise 3 */
 
+// function generateID() {
+//     return function() {
+//         return Math.floor(Math.random() * 9000) + 1000;
+//     }
+// }
+
+// const newID = generateID();
+// console.log(newID());
+// console.log(newID());
+// console.log(newID());
