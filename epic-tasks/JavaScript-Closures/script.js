@@ -123,14 +123,14 @@ console.log(makeCounter());  // 3
 
 /* Exercise 2 */
 
-// function makeAdder(a) {
-//     return function(b) {
-//         return a + b;
-//     };
-// }
+function makeAdder(a) {
+    return function(b) {
+        return a + b;
+    };
+}
 
-// const addNumbers = makeAdder(4);
-// console.log( addNumbers(8) );  // 12
+const addNumbers = makeAdder(4);
+console.log( addNumbers(8) );  // 12
 
 // /* Exercise 3 */
 
