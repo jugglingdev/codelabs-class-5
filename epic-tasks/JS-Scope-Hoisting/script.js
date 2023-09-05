@@ -62,3 +62,15 @@ hoistingTest(sentence3);  // I wanna laugh with somebody
 
 /* Exercise 3 */
 
+function hoistChallenge() {
+    if (true) {
+        console.log(food);  // Accessing before declaration
+                            // Cannot access 'food' before initialization
+        let food = 'pizza';
+    }
+
+    console.log(food);  // Accessing outside the block
+                        // food is not defined
+}
+
+hoistChallenge();
