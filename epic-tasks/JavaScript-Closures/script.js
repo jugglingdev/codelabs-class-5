@@ -132,15 +132,15 @@ function makeAdder(a) {
 const addNumbers = makeAdder(4);
 console.log( addNumbers(8) );  // 12
 
-// /* Exercise 3 */
+/* Exercise 3 */
 
-// function generateID() {
-//     return function() {
-//         return Math.floor(Math.random() * 9000) + 1000;
-//     }
-// }
+function generateID() {
+    return function() {
+        return Math.floor(Math.random() * 9000) + 1000;  // generate random 4-digit ID
+    }
+}
 
-// const newID = generateID();
-// console.log(newID());
-// console.log(newID());
-// console.log(newID());
+const newID = generateID();
+console.log(newID());
+console.log(newID());
+console.log(newID());
