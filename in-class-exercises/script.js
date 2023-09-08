@@ -64,6 +64,21 @@ console.log(colorVotes.compareColorCounts()); // Green: 4
 
 // Exercise 4
 
+let myGlobal = 'David';
+
+function modifyGlobal() {
+    myGlobal = 'Scott';
+    console.log(myGlobal); // Scott
+}
+
+function localScopeTest() {
+    let myGlobal = 'Bruce';
+    console.log(myGlobal); // Bruce
+}
+
+modifyGlobal();
+localScopeTest();
+
 // Exercise 5
 
 // Exercise 6
