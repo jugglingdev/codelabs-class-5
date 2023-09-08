@@ -93,7 +93,13 @@ myFactory(); // 126
 
 // Exercise 6
 
+function hoistingTest() {
+    console.log(animal);
 
+    let animal = 'penguin';
+}
+
+// hoistingTest();  // Cannot access 'animal' before initialization
 
 // Exercise 7
 
