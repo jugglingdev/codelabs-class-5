@@ -103,6 +103,40 @@ function hoistingTest() {
 
 // Exercise 7
 
+function setupCounter() {
+    let count = 0;
+
+    return function() {
+        console.log(++count);
+    }
+}
+
+const myCounter = setupCounter();
+myCounter(); // 1
+myCounter(); // 2
+myCounter(); // 3
+
 // Exercise 8
+
+function setupCounter() {
+    let count = 0;
+
+    return function() {
+        if (count < 3) {
+            count++;
+            console.log(count);
+        } else {
+            count = 1;
+            console.log(count);
+        }
+    }
+}
+
+const counter = setupCounter();
+counter(); // 1
+counter(); // 2
+counter(); // 3
+counter(); // 1
+counter(); // 2
 
 // Exercise 9
