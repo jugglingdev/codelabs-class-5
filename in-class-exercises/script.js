@@ -31,9 +31,36 @@ mainFunction();
 
 // Exercise 3
 
+function countVotes() {
+    let greenVotes = 0;
+    let purpleVotes = 0;
 
+    return {
+        incrementGreen: function() {
+            greenVotes++;
+            return `Green: ${greenVotes}`;
+        },
+        incrementPurple: function() {
+            purpleVotes++;
+            return `Purple: ${purpleVotes}`;
+        },
+        compareColorCounts: function() {
+            return `Green: ${greenVotes}` + 
+                    `\nPurple: ${purpleVotes}`;
+        }
+    }
+}
 
+const colorVotes = countVotes();
 
+console.log(colorVotes.incrementGreen()); // Green: 1
+console.log(colorVotes.incrementGreen()); // Green: 2
+console.log(colorVotes.incrementPurple()); // Purple: 1
+console.log(colorVotes.incrementGreen()); // Green: 3
+console.log(colorVotes.incrementPurple()); // Purple: 2
+console.log(colorVotes.incrementGreen()); // Green: 4
+console.log(colorVotes.compareColorCounts()); // Green: 4
+     // Purple: 2
 
 // Exercise 4
 
