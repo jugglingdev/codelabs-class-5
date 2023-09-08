@@ -145,8 +145,15 @@ let globalVar = 'Coding is awesome';
 
 function modifyGlobalVar() {
     globalVar = 'Coding is cool';
-    console.log(globalVar);
+
+    return function() {
+        return globalVar;
+    }
 }
+
+const outer = modifyGlobalVar();
+console.log(outer());
+
 
 function modifyLocalVar() {
     // localVar = 'Software developers are fun'; // Cannot access 'localVar' before initialization
