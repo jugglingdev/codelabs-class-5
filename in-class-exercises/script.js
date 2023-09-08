@@ -81,7 +81,19 @@ localScopeTest();
 
 // Exercise 5
 
+function functionFactory(param) {
+    return function() {
+        let multiply = param * 42;
+        console.log(multiply);
+    }
+}
+
+let myFactory = functionFactory(3);
+myFactory(); // 126
+
 // Exercise 6
+
+
 
 // Exercise 7
 
