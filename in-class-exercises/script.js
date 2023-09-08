@@ -140,3 +140,20 @@ counter(); // 1
 counter(); // 2
 
 // Exercise 9
+
+let globalVar = 'Coding is awesome';
+
+function modifyGlobalVar() {
+    globalVar = 'Coding is cool';
+    console.log(globalVar);
+}
+
+function modifyLocalVar() {
+    // localVar = 'Software developers are fun'; // Cannot access 'localVar' before initialization
+
+    let localVar = 'Software developers are super';
+    console.log(localVar);
+}
+
+modifyGlobalVar();
+modifyLocalVar();
