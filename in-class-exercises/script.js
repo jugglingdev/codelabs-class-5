@@ -19,7 +19,21 @@ outerFunction();
 
 // Exercise 2
 
+function mainFunction() {
+    hoistedFunction();
+
+    function hoistedFunction() {
+        console.log(`I'm hoisted!`);
+    }
+}
+
+mainFunction();
+
 // Exercise 3
+
+
+
+
 
 // Exercise 4
 
