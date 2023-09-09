@@ -71,4 +71,33 @@ console.groupEnd();
 
 // Question #4: First Unique Character
 
+console.groupCollapsed('4: First Unique Character');
+
+    function firstUniqueCharacter(string) {
+        let uniqueChar = [];
+        let stringArray = string.split('');
+
+        for (char of stringArray) {
+            if (!uniqueChar.includes(char)) {
+                uniqueChar.push(char);
+            } else {
+                uniqueChar.splice(uniqueChar.indexOf(char), 1);
+            }
+        }
+
+        let answer = uniqueChar.length == 0 ? -1 : stringArray.indexOf(uniqueChar[0]);
+        console.log(answer);
+    }
+
+    firstUniqueCharacter('loveleetcode');  // 2
+    firstUniqueCharacter('what a wonderful world');  // 1
+    firstUniqueCharacter('xoxo');  // -1
+
+console.groupEnd();
+
 // Question #5: Move Zeroes
+
+console.groupCollapsed('5: Move Zeroes');
+
+
+console.groupEnd();
