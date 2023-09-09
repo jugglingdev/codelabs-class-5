@@ -99,5 +99,16 @@ console.groupEnd();
 
 console.groupCollapsed('5: Move Zeroes');
 
+    function moveZeroes(array) {
+        for (num of array) {
+            if (num == 0) {
+                array.splice(array.indexOf(num), 1);
+                array.push(num);
+            }
+        }
+        console.log(array);
+    }
+
+    moveZeroes([0, 1, 0, 3, 12]);  // [1, 3, 12, 0, 0]
 
 console.groupEnd();
